@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/half_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:layout_marginEnd="@dimen/half_margin"
+        app:cardCornerRadius="@dimen/quarter_margin"
+        app:cardElevation="@dimen/quarter_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/countTextView"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintBottom_toTopOf="@id/countLabelTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="18" />
+
+            <TextView
+                android:id="@+id/countLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_detail"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/countTextView"
+                app:layout_constraintStart_toStartOf="@+id/countTextView"
+                app:layout_constraintTop_toBottomOf="@id/countTextView"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/request1LabelTextView"
+                android:layout_width="@dimen/circle_dimen"
+                android:layout_height="@dimen/circle_dimen"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:background="@drawable/sh_circle"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_detail"
+                app:layout_constraintBottom_toBottomOf="@id/request1TextView"
+                app:layout_constraintStart_toEndOf="@id/countTextView"
+                app:layout_constraintTop_toTopOf="@id/request1TextView" />
+
+            <TextView
+                android:id="@+id/request2LabelTextView"
+                android:layout_width="@dimen/circle_dimen"
+                android:layout_height="@dimen/circle_dimen"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:background="@drawable/sh_circle"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="@string/_2"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_detail"
+                app:layout_constraintBottom_toBottomOf="@id/request2TextView"
+                app:layout_constraintStart_toEndOf="@id/countTextView"
+                app:layout_constraintTop_toTopOf="@id/request2TextView" />
+
+            <TextView
+                android:id="@+id/request3LabelTextView"
+                android:layout_width="@dimen/circle_dimen"
+                android:layout_height="@dimen/circle_dimen"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:background="@drawable/sh_circle"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="@string/_3"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_detail"
+                app:layout_constraintBottom_toBottomOf="@id/request3TextView"
+                app:layout_constraintStart_toEndOf="@id/countTextView"
+                app:layout_constraintTop_toTopOf="@id/request3TextView" />
+
+            <TextView
+                android:id="@+id/request1TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/half_margin"
+                android:layout_marginTop="@dimen/quarter_margin"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toTopOf="@+id/request2TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/request1LabelTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="GET /products/car/ HTTP/1.1" />
+
+            <TextView
+                android:id="@+id/request2TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/half_margin"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toTopOf="@+id/request3TextView"
+                app:layout_constraintEnd_toEndOf="@+id/request1TextView"
+                app:layout_constraintStart_toEndOf="@+id/request2LabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/request1TextView"
+                tools:text="GET /contact/ HTTP/1.1" />
+
+            <TextView
+                android:id="@+id/request3TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/half_margin"
+                android:layout_marginBottom="@dimen/quarter_margin"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/request2TextView"
+                app:layout_constraintStart_toEndOf="@+id/request3LabelTextView"
+                app:layout_constraintTop_toBottomOf="@+id/request2TextView"
+                tools:text="GET /products/ HTTP/1.1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
